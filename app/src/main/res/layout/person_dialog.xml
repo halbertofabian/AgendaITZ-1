@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtAddPerson"
+        android:text="Agregar Persona"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPersonId"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/txtAddPerson">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPersonId"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="id de la Persona"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPersonId">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Nombre de la Persona"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPersonBorn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPersonName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPersonBornDate"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="date"
+            android:hint="@string/fecha_nacimiento"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:clickable="true"
+            android:maxLines="1">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textGenero"
+        android:text="@string/genero"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layPersonBorn"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp" />
+
+    <LinearLayout
+        android:id="@+id/radGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textGenero">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/sexMas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sex_masc"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/sexFem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sex_fem"
+                android:checked="false"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPersonplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/radGender">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPersonplace"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Lugar de Procedencia"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPersonPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPersonplace">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPersonPhone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Telefono"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPersonMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPersonPhone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPersonMail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/e_mail"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textRol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rol"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layPersonMail"
+        android:layout_marginStart="5dp" />
+
+    <Spinner
+        android:id="@+id/rolSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textRol" />
+
+    <TextView
+        android:id="@+id/textPerPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lugar"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rolSpinner"
+        android:layout_marginStart="5dp" />
+
+    <Spinner
+        android:id="@+id/perPlaceSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textPerPlace" />
+
+    <TextView
+        android:id="@+id/textEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evento"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/perPlaceSpinner"
+        android:layout_marginStart="5dp" />
+
+    <Spinner
+        android:id="@+id/eventPerSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textEvent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPersonCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/eventPerSpinner">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPersonCode"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Clave"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+</ScrollView>

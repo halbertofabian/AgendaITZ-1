@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtAddPerson"
+        android:text="Agregar Tematica"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layThematic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPersonPhone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editThematicName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Tematica"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layThematicColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layThematic">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editThematicColor"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Color"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layThematicVest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layThematicColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editThematicVest"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="textEmailAddress"
+            android:hint="Vestimenta"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layThematicDecoration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layThematicVest">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editThematicDecoration"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Decoracion"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+</RelativeLayout>

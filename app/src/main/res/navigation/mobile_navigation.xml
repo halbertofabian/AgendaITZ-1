@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.agendaitz.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_activities"
+        android:name="com.example.agendaitz.ui.activities.ActivitiesFragment"
+        android:label="@string/menu_activities"
+        tools:layout="@layout/fragment_activities" />
+
+    <fragment
+        android:id="@+id/nav_places"
+        android:name="com.example.agendaitz.ui.places.PlacesFragment"
+        android:label="@string/menu_places"
+        tools:layout="@layout/fragment_places" />
+
+    <fragment
+        android:id="@+id/nav_guests"
+        android:name="com.example.agendaitz.ui.guests.GuestsFragment"
+        android:label="@string/menu_guests"
+        tools:layout="@layout/fragment_guests" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="com.example.agendaitz.ui.events.EventsFragment"
+        android:label="@string/menu_events"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/nav_persons"
+        android:name="com.example.agendaitz.ui.persons.PersonsFragment"
+        android:label="@string/menu_persons"
+        tools:layout="@layout/fragment_persons" />
+
+    <fragment
+        android:id="@+id/nav_thematic"
+        android:name="com.example.agendaitz.ui.thematic.ThematicFragment"
+        android:label="@string/menu_thematic"
+        tools:layout="@layout/fragment_thematic" />
+
+</navigation>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:layout_centerHorizontal="true">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtAddGuests"
+        android:text="@string/agregar_invitado"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layGuestName"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/txtAddGuests">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editGuestName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:inputType="text"
+        android:hint="@string/nombre_invitado"
+        android:textColor="@color/DarkBlue"
+        android:textSize="20sp">
+    </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layGuestBorn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layGuestName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editGuestBornDate"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="date"
+            android:hint="@string/fecha_nacimiento"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:clickable="true"
+            android:maxLines="1">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textGenero"
+        android:text="@string/genero"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layGuestBorn"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp" />
+
+    <LinearLayout
+        android:id="@+id/radGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textGenero">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/sexMas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sex_masc"
+                android:checked="false" />
+
+
+            <RadioButton
+                android:id="@+id/sexFem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sex_fem"
+                android:checked="false"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layGuestplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/radGender">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editGuestplace"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="@string/lugar_procedencia"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layGuestPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layGuestplace">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editGuestPhone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="@string/telefono"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layGuestMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layGuestPhone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editGuestMail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/e_mail"
+            android:textColor="@color/DarkBlue"
+            android:textSize="20sp">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Codigo de Identificación"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layGuestMail"
+        android:layout_marginStart="5dp" />
+
+    <Spinner
+        android:id="@+id/codeSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textCode" />
+
+    <TextView
+        android:id="@+id/textParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parentesco"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/codeSpinner"
+        android:layout_marginStart="5dp" />
+
+    <Spinner
+        android:id="@+id/parentSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textParent" />
+
+    <TextView
+        android:id="@+id/text_lugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lugar"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/parentSpinner"
+        android:layout_marginStart="5dp" />
+
+    <Spinner
+        android:id="@+id/lugarSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/text_lugar"/>
+
+</RelativeLayout>
+
+</ScrollView>

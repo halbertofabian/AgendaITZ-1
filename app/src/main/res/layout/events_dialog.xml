@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textAddEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Evento"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layNameEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textAddEvent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNameEvent"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:hint="Nombre de Evento"
+            android:textColor="@color/Blue"
+            android:layout_height="45dp"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layEventDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layNameEvent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEventDate"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:hint="Fecha de Evento"
+            android:textColor="@color/Blue"
+            android:layout_height="45dp"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:clickable="true"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/layPostalTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/layEventDate">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layEventPostalCode"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layEventDate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEventPostalCode"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Codigo Postal"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layEventPago"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layEventPostalCode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEventPago"
+            android:layout_width="140dp"
+            android:inputType="number"
+            android:hint="Total Pagado"
+            android:textColor="@color/Blue"
+            android:layout_height="45dp"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textEventTemathic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tematica"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layPostalTotal"/>
+
+    <Spinner
+        android:id="@+id/evenThematic"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textEventTemathic" />
+
+    <TextView
+        android:id="@+id/textThematic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lugar"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/evenThematic"/>
+
+    <Spinner
+        android:id="@+id/thematicSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textThematic" />
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textAddActiti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Agregar Actividad"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layNombActi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/textAddActiti">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNombActi"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:hint="Nombre de la Actividad"
+            android:textColor="@color/Blue"
+            android:layout_height="45dp"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layDescActi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layNombActi">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDescActi"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:hint="Descripción"
+            android:textColor="@color/Blue"
+            android:layout_height="45dp"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layDateIni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layDescActi">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDateIni"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="date"
+            android:hint="Fecha de Inicio"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:clickable="true"
+            android:maxLines="1">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layDateFin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layDateIni">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDateFin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="date"
+            android:hint="Fecha de Termino"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:clickable="true"
+            android:maxLines="1">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/layCostos"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layDateFin">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layGastActi"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layDateFin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editGastoActi"
+            android:layout_width="155dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Costo Actividad"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layTotalPag"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layGastActi">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTotalPag"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Total Pagado"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evento"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layCostos"/>
+
+    <Spinner
+        android:id="@+id/eventSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textEvento" />
+
+    <TextView
+        android:id="@+id/textPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lugar"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/eventSpinner"/>
+
+    <Spinner
+        android:id="@+id/placeSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textPlace" />
+
+</RelativeLayout>

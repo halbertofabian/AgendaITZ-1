@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textAddPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Agregar Lugar"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layNombPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/textAddPlace">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNombActi"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Nombre de la Actividad"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPlaceDir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layNombPlace">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPlaceDir"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Dirección"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPlacePostalCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPlaceDir">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPlacePostalCode"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Codigo Postal"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPlaceDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPlacePostalCode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPlaceDescription"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Descripcion"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPlaceOwnerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPlaceDescription">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPlaceOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="text"
+            android:hint="Nombre del Dueño"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layPlaceOwnerName"
+        android:orientation="horizontal">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPlacePhone"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPlaceOwnerName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPlacePhone"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Telefono"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layPlaceCapaci"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="#B7696969"
+        android:padding="5dp"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/layPlaceOwnerName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPlaceCapaci"
+            android:layout_width="140dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:hint="Capacidad"
+            android:textColor="@color/Blue"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+</RelativeLayout>
